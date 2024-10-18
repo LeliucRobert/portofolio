@@ -1,0 +1,92 @@
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #ffffff25;
+  border: 1px #000;
+  border-radius: 0 0 4vmax 4vmax;
+  box-shadow: inset 0 0 15px #000;
+  font-size: 2vmax;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 0.3vmax 4vmax;
+  transition: all 0.5s;
+  width: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.NavBar .NavBarLabel {
+  display: "flex";
+  flex-direction: "column";
+  align-items: "flex-start";
+}
+
+.NavBarLabel1,
+.NavBarLabel2 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-right: 20px;
+  margin-left: 80px;
+}
+
+.NavBar .NavBarLabel .NavBarLabel1 {
+  color: var(--third-color);
+}
+
+.NavBar .NavBarLabel .NavBarLabel2 {
+  color: var(--secondary-color);
+  margin-left: 100px;
+}
+
+.NavBar .NavBarLinks a {
+  color: var(--third-color);
+  font-size: 1.1vmax;
+  list-style: none;
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.NavBarLinks a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--secondary-color);
+  transform: scaleX(0) scaleY(1);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.NavBarLinks a:hover::after {
+  left: 0;
+  transform: scaleX(0.8) scaleY(1.8);
+  width: 100%;
+}
+
+.NavBarLinks a:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+}
+
+.NavBarTitle {
+  color: var(--third-color);
+}

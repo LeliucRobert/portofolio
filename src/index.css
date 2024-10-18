@@ -1,0 +1,18 @@
+/** @format */
+
+@import "./colors.css";
+@import "components/NavBar.css";
+@import "components/HomeSection.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
